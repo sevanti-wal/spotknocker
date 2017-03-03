@@ -1,0 +1,229 @@
+@CHARSET "UTF-8";
+
+/* HEADER */
+.container {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	min-height: 100vh;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+header {
+	flex: 0 1 auto;
+}
+
+.logged-in-header .secondary-header-section, footer.logged-in-footer {
+	display: none;
+}
+
+/* MAIN SECTION */
+.main-section, .page-section, .page-form, .my-files-container,
+	.my-files-block {
+	flex: 1 1 auto;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.page-section {
+	margin-top: 0.125rem;
+}
+
+.form-add-file-block {
+	padding: 0 0 0.625rem 1.25rem;
+	flex: 1;
+	overflow-y: hidden;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.add-file-wrapper {
+	overflow-y: auto;
+	width: 100%;
+}
+
+.file-input-wrapper {
+	display: block;
+	margin-bottom: 1rem;
+	margin-right: 1.25rem;
+}
+
+span.upload_files_section.open-popup-link, .file-input-wrapper>a {
+	display: block;
+}
+
+.file-upload {
+	height: 0;
+	width: 0;
+}
+
+.file-upload:focus {
+	outline: none;
+}
+
+.file-upload-label {
+	border-radius: 2.5px;
+	background-color: #f7f7f7;
+	border: 1px solid #979797;
+	padding: 0.875rem;
+	display: block;
+	font-size: 0.8125rem;
+	color: #2f7dc2;
+}
+
+.add-file-button {
+	border-radius: 2.5px;
+	background-color: #f7f7f7;
+	border: 0.0625rem solid #2f7dc2;
+	padding: 0.875rem 0;
+	text-align: center;
+	font-size: 0.8125rem;
+	color: #2f7dc2;
+	display: block;
+	margin-top: 1rem;
+	margin-right: 1.25rem;
+}
+
+.login-button-block {
+	flex: 0 0 auto;
+}
+
+span.form-desc {
+	opacity: 0.5;
+	font-size: 0.8125rem;
+	text-align: center;
+	color: #3b3b3b;
+	display: block;
+	padding: 1.875rem 1.25rem;
+}
+
+@media handheld , only screen and (min-width: 768px) {
+	.my-files-container {
+		padding: 0 5%;
+		width: 90%;
+		max-width: 1200px;
+		margin: 0px auto;
+	}
+	.my-files-block.how-it-works-block {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.how-it-works-item {
+		width: 23.5%;
+	}
+	.how-it-works-item>.video-container {
+		width: 100%;
+	}
+	.how-it-works-item .how-it-works-video-btn {
+		width: 25%;
+		height: 50%;
+	}
+	.video-details-block {
+		margin-top: 2.25rem;
+		font-size: 1rem;
+		color: #3b3b3b;
+	}
+	.video-details-block>span {
+		display: block;
+		text-align: center;
+	}
+	.video-details-header {
+		font-weight: bold;
+	}
+	.page-section {
+		margin-bottom: 3.75rem;
+	}
+	.subscription-plan-item {
+		width: 32%;
+		border-radius: 5px;
+		box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.4);
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: column;
+	}
+	.main-section,.subscription-plan-details {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+	}
+	.subscription-plan-details {
+		padding: 1.25rem 1.875rem;
+	}
+	.login-button.choose-subscription-plan {
+		border-radius: 0;
+		padding: 1.25rem 0;
+		border-bottom-left-radius: 0.3125rem;
+		border-bottom-right-radius: 0.3125rem;
+		font-size: 1.125rem;
+		margin: 0;
+		text-align: center;
+	}
+	.login-button.choose-subscription-plan:focus {
+		outline: none;
+	}
+	.my-files-block.how-it-works-block.faq-block .subscription-plan-item {
+		width: 100%;
+		padding: 1.563rem 0 2.813rem 3.125rem;
+		height: 50vh;
+		overflow-y: auto;
+		display: block;
+	}
+	.subscription-plan-details.faq-question-block {
+		padding: 1.563rem 0 2.5rem;
+		flex: 0;
+		border-bottom: 1px solid #979797;
+	}
+	.subscription-plan-details.faq-question-block:first-child {
+		padding-top: 0;
+	}
+	.my-files-block.how-it-works-block.contact-us-block .subscription-plan-item
+		{
+		width: 100%;
+		padding: 1.563rem 3.125rem 2.813rem;
+	}
+	.my-files-block.how-it-works-block.contact-us-block span.subscription-plan-header
+		{
+		font-weight: bold;
+	}
+}
+
+@media handheld , only screen and (min-width: 992px) {
+	.page-form, .my-files-block, .secondary-header-section,
+		.logged-in-header .secondary-header-section, footer, footer.logged-in-footer
+		{
+		display: block;
+	}
+	.page-section {
+		margin-top: 0;
+	}
+	header {
+		flex: initial;
+	}
+	body {
+		min-height: 100%;
+		height: auto;
+	}
+}
